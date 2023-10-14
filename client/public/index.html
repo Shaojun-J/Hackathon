@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
@@ -20,10 +21,35 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-  </head>
-  <body>
+
+    <script>
+        var request = require('request');
+        function updateClient(postData) {
+            console.log("updateClient");
+            fetch('http://localhost:9000/users_test', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "id": 123456,
+                    "first_name": document.getElementsByName("first_name")[0].value,
+                    "last_name": document.getElementsByName("last_name")[0].value
+                })
+            })
+                .then(response => response.json())
+                .then(response => {
+                    console.log("response:" + response.first_name + " " + response.last_name);
+                    console.log(JSON.stringify(response));
+                })
+        }
+    </script>
+</head>
+
+<body>
     <noscript>
-      You need to enable JavaScript to run this app.
+        You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
     <!--
@@ -36,5 +62,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+    <h1>Hello JS</h1>
+    <div>
+        <form action="http://localhost:9000/users_test" method="post">
+            First Name: <input type="text" name="first_name"> <br>
+            Last Name: <input type="text" name="last_name">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        <button id="btn_1" onclick="updateClient() ">click me</button>
+    </div>
+</body>
+
 </html>

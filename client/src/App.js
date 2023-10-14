@@ -15,8 +15,32 @@ class App extends Component {
             .catch(err => err);
     }
 
+    callPost() {
+        console.log("updateClient");
+        fetch('http://localhost:9000/users_test', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                // enctype: 'multipart/form-data'
+            },
+            body: JSON.stringify({
+                "id": 654321,
+                "first_name": "Peter",
+                "last_name": "Pan"
+            })
+        })
+            .then(response => response.json())
+            .then(response => {
+                console.log("response:" + response.first_name + " " + response.last_name);
+                console.log(JSON.stringify(response));
+            })
+
+    }
+
     componentDidMount() {
-        this.callAPI();
+        // this.callAPI();
+        this.callPost();
     }
 
     render() {

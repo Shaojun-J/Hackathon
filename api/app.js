@@ -8,6 +8,7 @@ var cors = require("cors");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var testAPIRouter = require("./routes/testAPI");
+var users_testRouter = require("./routes/users_test");
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/testAPI", testAPIRouter);
+app.use("/users_test", users_testRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -41,5 +43,8 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render("error");
 });
+
+const dotenv= require('dotenv').config();
+console.log("PG_HOST:", process.env.PG_HOST);
 
 module.exports = app;
