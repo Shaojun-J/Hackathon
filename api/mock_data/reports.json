@@ -1,29 +1,7 @@
 [
     {
         "riskLevel": "Low Risk",
-        "assessments": [
-            {
-                "title": "Date Exposure",
-                "content": "Sharing your son's age with today's date reveals his birthdate. If used in passwords or security measures, this info increases vulnerability."
-            },
-            {
-                "title": "Location Exposure",
-                "content": "Mentioning \"Chuck E. Cheese's\" can disclose your location, offering cyber attackers, data about your movements or routines."
-            }
-        ],
-        "recommendations": [
-            {
-                "title": "Generalize Time References",
-                "content": "Use vague time references, like \"recently\"."
-            },
-            {
-                "title": "Be Ambiguous with Locations",
-                "content": "Describe locations generally, saying \"a kids' favorite place\" instead of specific venue names."
-            }
-        ]
-    },
-    {
-        "riskLevel": "High Risk",
+        "general":"Your post has been rated as low risk, but there are aspects that could be leveraged for cyber attacks",
         "assessments": [
             {
                 "title": "Date Exposure",
@@ -47,24 +25,57 @@
     },
     {
         "riskLevel": "Medium Risk",
+        "general":"Your post contains information that can be of interest to cyber adversaries",
         "assessments": [
             {
-                "title": "Date Exposure",
-                "content": "Sharing your son's age with today's date reveals his birthdate. If used in passwords or security measures, this info increases vulnerability."
+                "title": "Job Details",
+                "content": "Revealing your new position at \"XYZ Corporation\" as a \"Senior Software Engineer\" makes you a potential target for spear-phishing attacks or attempts to gather company-specific data."
             },
             {
-                "title": "Location Exposure",
-                "content": "Mentioning \"Chuck E. Cheese's\" can disclose your location, offering cyber attackers, data about your movements or routines."
+                "Travel Plans": "Location Exposure",
+                "content": "By specifying you'll be in \"New Orleans\" for a family reunion, you share when you might be away from home, which can pose physical security risks."
             }
         ],
         "recommendations": [
             {
-                "title": "Generalize Time References",
-                "content": "Use vague time references, like \"recently\"."
+                "title": "Restrict Career Announcements",
+                "content": "Opt for \"Excited for my new job opportunity starting tomorrow! #CareerGrowth\" without mentioning the company or precise role."
             },
             {
-                "title": "Be Ambiguous with Locations",
-                "content": "Describe locations generally, saying \"a kids' favorite place\" instead of specific venue names."
+                "title": "Generalize Personal Events",
+                "content": "Consider saying \"Looking forward to a family reunion soon!\" without pinpointing the location and date."
+            }
+        ]
+    },
+    {
+        "riskLevel": "High Risk",
+        "general":"Your recent post contains multiple pieces of information that can be valuable for cyber adversaries and might increase your vulnerability to social engineering attacks or other cyber threats",
+        "assessments": [
+            {
+                "title": "Address Exposure",
+                "content": "Revealing \"Elm Street\" pinpoints your residence, increasing risks like stalking or break-ins."
+            },
+            {
+                "title": "Insurance Details",
+                "content": "Naming \"XYZ Insurance\" opens doors for targeted scams or phishing attacks from fraudsters pretending to be the company."
+            },
+            {
+                "title": "License Info",
+                "content": "Stating license renewal today gives a direct expiration timeline, aiding tailored phishing attempts."
+            }
+        ],
+        "recommendations": [
+            {
+                "title": "Limit Details",
+                "content": "Say \"Moved to our dream home!\" without specifics."
+            },
+            {
+                "title": "Generalize Company Info",
+                "content": "State \"Updated my health insurance\" without naming the company."
+            },
+            {
+                "title": "Avoid Date References",
+                "content": "Opt for \"Excited to start driving!\" without specifying \"today\"."
             }
         ]
     }
