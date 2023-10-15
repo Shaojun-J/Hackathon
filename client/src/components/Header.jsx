@@ -15,7 +15,7 @@ const Header = () => {
           alt="Line"
           src="https://cdn.animaapp.com/projects/652aa011bab172ab385d1614/releases/652aaa6b06102a4c5647abb0/img/line-1.svg"
         />
-        <div className="text-wrapper-3">ExposeAlert</div>
+        <div className="text-wrapper-3">PostGuardian</div>
         <img
           className="search-off"
           alt="Search off"
