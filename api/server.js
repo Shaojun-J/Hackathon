@@ -11,7 +11,8 @@ const PORT = 9000;
 
 app.post("/data", (req, res) => {
   const receivedData = req.body;
-  // process data and prepare report
+
+  // TODO: add switch cases to check which report to return
   const report = report1;
 
   res.json(

@@ -2,7 +2,7 @@ import React from "react";
 
 function Report({ data, onClose }) {
   const nestedData = data.data;
-  
+
   const assessments = nestedData.assessments.map((assessment, index) => (
     <li key={index}>
       <h4>{assessment.title}</h4>
@@ -18,16 +18,36 @@ function Report({ data, onClose }) {
       </li>
     )
   );
+
+  const getClassNameByRiskLevel = (riskLevel) => {
+    switch (riskLevel) {
+        case 'Low Risk':
+          return 'low-risk';
+        case 'Medium Risk':
+          return 'medium-risk';
+        case 'High Risk':
+          return 'high-risk';
+        default:
+          return '';
+      }
+    };
+
   return (
     <div className="popup">
       <button onClick={onClose}>Close</button>
-      <h2>{nestedData.riskLevel}</h2>
+      <div className={getClassNameByRiskLevel(nestedData.riskLevel)}>
+        <h2>{nestedData.riskLevel}</h2>
+      </div>
 
-      <h3>Assessments</h3>
+    <div className="assessments">
+      <h2>Assessments</h2>
       <ul>{assessments}</ul>
+    </div>
 
-      <h3>Recommendations</h3>
+    <div className="recommendations">
+      <h2>Recommendations</h2>
       <ul>{recommendations}</ul>
+    </div>
     </div>
   );
 }
