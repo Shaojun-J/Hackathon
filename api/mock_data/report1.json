@@ -1,0 +1,24 @@
+{
+    "riskLevel": "Low Risk",
+    "assessments": [
+        {
+            "title": "Date Exposure",
+            "content": "Sharing your son's age with today's date reveals his birthdate. If used in passwords or security measures, this info increases vulnerability."
+        },
+        {
+            "title": "Location Exposure",
+            "content": "Mentioning \"Chuck E. Cheese's\" can disclose your location, offering cyber attackers, data about your movements or routines."
+        }
+    ],
+    "recommendations": [
+        {
+            "title": "Generalize Time References",
+            "content": "Use vague time references, like \"recently\"."
+        },
+        {
+            "title": "Be Ambiguous with Locations",
+            "content": "Describe locations generally, saying \"a kids' favorite place\" instead of specific venue names."
+        }
+    ]
+  }
+  

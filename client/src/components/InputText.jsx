@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Report from "./Report"
+import Report from "./Report";
 
 const InputText = () => {
-  const [formData, setFormData] = useState({ posts: '' });
+  const [formData, setFormData] = useState({ post: "" });
   const [response, setResponse] = useState(null);
   const [isReportVisible, setReportVisible] = useState(false);
 
@@ -15,12 +15,12 @@ const InputText = () => {
     // send out inputText to the backend server through an post request
     e.preventDefault();
 
-    const res = await fetch('http://localhost:9000/data', {
-      method: 'POST',
+    const res = await fetch("http://localhost:9000/data", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     });
 
     const data = await res.json();
@@ -38,16 +38,20 @@ const InputText = () => {
         <form onSubmit={handleSubmit}>
           <textarea
             className="text-input" // Add a CSS class for styling if needed
-            name="posts"
-            placeholder="Enter posts..."
+            name="post"
+            placeholder="Enter post..."
             onChange={handleChange}
-            value={formData.posts}
+            value={formData.post}
             rows="5"
             cols="50"
           />
-          <button type="submit" className="check-button">Check</button>
+          <button type="submit" className="check-button">
+            Check
+          </button>
         </form>
-        {isReportVisible && <Report data={response} onClose={handleCloseReport} />}
+        {isReportVisible && (
+          <Report data={response} onClose={handleCloseReport} />
+        )}
       </div>
     </>
   );

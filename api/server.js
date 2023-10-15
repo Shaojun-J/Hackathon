@@ -2,30 +2,24 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const report1 = require('./mock_data/report1.json')
 
 app.use(bodyParser.json());
 app.use(cors());
 
 const PORT = 9000;
 
-app.get("/hello", (req, res) => {
-  res.json({
-    message: "Hello!",
-  });
-});
-
 app.post("/data", (req, res) => {
   const receivedData = req.body;
   // process data and prepare report
-  const report = {
-    "safe-rating": "Low Risk",
-    "assessment": "Your post has been rated as low risk, but there are aspects that could be leveraged for cyberattacks.",
-    "recommendation": "Generalize Time References"
-  }
-  res.json({
-    message: "Data received!",
-    data: { ...receivedData, ...report },
-  });
+  const report = report1;
+
+  res.json(
+    {
+      message: "Data received!",
+      data: { ...receivedData, ...report },
+    }
+  );
 });
 
 app.listen(PORT, () => {

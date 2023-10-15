@@ -283,11 +283,11 @@
 }
 
 .index .text-wrapper-8 {
-  color: #ffffff99;
+  color: #000000;
   font-family: "Inter", Helvetica;
   font-size: 16px;
   font-weight: 400;
-  left: 14px;
+  left: 9px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -301,24 +301,25 @@
   border-color: #6699d6;
   border-radius: 8px;
   box-shadow: 0px 4px 4px #00000040;
-  height: 37px;
+  height: 40px;
   left: 670px;
   position: absolute;
-  top: 720px;
-  width: 174px;
+  top: 715px;
+  width: 250px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .index .social-media {
   color: #ffffff;
   font-family: "Inter", Helvetica;
-  font-size: 16px;
   font-weight: 400;
   left: 25px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   top: 6px;
-  width: 129px;
+  width: 250px;
 }
 
 /* Add styles for the text input */
