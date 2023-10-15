@@ -34,25 +34,27 @@ const InputText = () => {
 
   return (
     <>
-      <div className="overlap-4">
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto">
+        <div class="flex border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
           <textarea
-            className="text-input" // Add a CSS class for styling if needed
+            id="message"
+            className="flex-grow px-4 py-2 text-sm text-gray-900 bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 focus:outline-none"
             name="post"
-            placeholder="Enter post..."
+            placeholder="Enter your post here..."
             onChange={handleChange}
             value={formData.post}
             rows="5"
-            cols="50"
           />
-          <button type="submit" className="check-button">
+
+          <button type="submit" class="px-4 py-2 text-xs font-medium text-center text-white bg-blue-400 rounded-r-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-500 hover:bg-blue-500 focus:outline-none">
             Check
           </button>
-        </form>
-        {isReportVisible && (
-          <Report data={response} onClose={handleCloseReport} />
-        )}
-      </div>
+        </div>
+      </form>
+
+      {isReportVisible && (
+        <Report data={response} onClose={handleCloseReport} />
+      )}
     </>
   );
 };

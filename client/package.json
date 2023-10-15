@@ -17,7 +17,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "tailwindcss": "^3.3.3"
   },
   "browserslist": {
     "production": [

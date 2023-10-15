@@ -7,20 +7,16 @@ import SocialMedia from "../components/SocialMedia";
 
 const Homepage = () => {
   return (
-    <div className="index">
-      <div className="div">
-        <Header />
-        <Tagline />
-        
-        <InputText />
+    <>
+      <Header />
+      <Tagline />
 
-        <div className="text-wrapper-6">or</div>
-        <UploadImage />
-        
-        <div className="text-wrapper-7">or</div>
-        <SocialMedia />
-      </div>
-    </div>
+      <InputText />
+
+      <UploadImage />
+
+      <SocialMedia />
+    </>
   );
 };
 
