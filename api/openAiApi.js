@@ -4,7 +4,7 @@ const OpenAI = require('openai-api');
 // (do not include your key directly in your code)
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-const openai = new OpenAI(OPENAI_API_KEY);
+const openai = new OpenAI({key :OPENAI_API_KEY });
 //Completion API call
 (async () => {
     const gptResponse = await openai.complete({
