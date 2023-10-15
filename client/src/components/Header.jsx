@@ -16,7 +16,7 @@ const Header = () => {
             </clipPath>
           </defs>
         </svg>
-        <span class="font-semibold text-xl tracking-tight ml-2">ExposeAlert</span>
+        <span class="font-semibold text-xl tracking-tight ml-2">PostGuardian</span>
       </div>
 
       <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto justify-end">
